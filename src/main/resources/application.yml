@@ -1,0 +1,25 @@
+spring:
+  h2:
+    console:
+      enabled: true
+
+  graphql:
+    graphiql:
+      enabled: true
+      path: /graphiql
+    schema:
+      locations: classpath:graphql/**/
+      file-extensions: .graphqls, .gqls
+      printer:
+        enabled: true
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=UTC
+    username: test
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

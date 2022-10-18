@@ -1,0 +1,13 @@
+type Member {
+    id: Int!,
+    name: String!,
+    department: Department!
+}
+
+extend type Query {
+    membersByDepNo(depNo: Int!): [Member],
+}
+
+extend type Mutation {
+    createMember(name: String!, depNo: Int!): Member!,
+}

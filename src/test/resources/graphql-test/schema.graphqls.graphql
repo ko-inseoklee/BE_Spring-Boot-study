@@ -1,0 +1,4 @@
+type Query {
+    departments: [Department],
+    getDepartment(id: Int!): Department!
+}
